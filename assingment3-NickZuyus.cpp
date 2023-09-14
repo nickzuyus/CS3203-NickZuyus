@@ -16,6 +16,21 @@ int productArray(int arr[], int size){
     }
     return sum;
 }
+void reverseArray(int arr[], int length) {
+    int start = 0;
+    int end = length - 1;
+
+    while (start < end) {
+        // Swap the elements at the start and end positions
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+
+        // Move the start and end pointers towards each other
+        start++;
+        end--;
+    }
+}
 
  int main(){
 
