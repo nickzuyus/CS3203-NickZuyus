@@ -45,7 +45,7 @@ std::cin >> size;
     for (int i = 0; i < size; i++) {
         std::cin >> arr[i];
     }
-
+int* rev = new int[size];
     // Calculate the sum of the array elements
    
     int totalSum = sumArray(arr, size);
