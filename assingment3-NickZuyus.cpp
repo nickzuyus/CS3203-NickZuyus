@@ -1,23 +1,23 @@
 #include <vector>
 #include <iostream>
 
-int sumArray(int arr[]) {
+int sumArray(int arr[], int size) {
     int sum = 0;
-    for (int i = 0; i < 5 ; i++) {
+    for (int i = 0; i < size; i++) {
         sum += arr[i];
     }
     return sum;
 }
 
-int productArray(int arr[]){
+int productArray(int arr[], int size){
     int sum = 1;
-      for (int i = 0; i < 5 ; i++) {
+      for (int i = 0; i <  size; i++) {
         sum = sum * arr[i];
     }
     return sum;
 }
 
-int main(){
+ int main(){
 
 int size;
 std:: cout << "enter array size";
@@ -26,18 +26,19 @@ std::cin >> size;
     int* arr = new int[size];
 
     // Input the elements of the array
+     std::cout << "Enter the array numbers";
     for (int i = 0; i < size; i++) {
         std::cin >> arr[i];
     }
 
     // Calculate the sum of the array elements
-    std::cout << "Enter the array numbers";
-    int totalSum = sumArray(arr);
-    
+   
+    int totalSum = sumArray(arr, size);
+    int product = productArray(arr, size);
     // Output the result
     std::cout << "Sum of the integers in the array: " << totalSum << std::endl;
     
-    std:: cout << "Product of the array is " << productArray(arr) << std::endl;
+    std:: cout << "Product of the array is " << product << std::endl;
 
 
     // Deallocate memory for the array
