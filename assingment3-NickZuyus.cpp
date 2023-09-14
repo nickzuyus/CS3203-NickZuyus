@@ -55,7 +55,7 @@ std::cin >> size;
     
     std:: cout << "Product of the array is " << product << std::endl;
 
-
+    std:: cout << " the reversed array is " << std :: endl;
     // Deallocate memory for the array
     delete[] arr;
 
