@@ -9,27 +9,20 @@ int sumArray(int arr[], int size) {
     return sum;
 }
 
+void reverseArray(int arr[], int length) {
+   for(int i = length; i > 0; i--){
+    std::cout << arr[i] << " ";
+   }
+   std::cout << std::endl;
+    
+}
+
 int productArray(int arr[], int size){
     int sum = 1;
       for (int i = 0; i <  size; i++) {
         sum = sum * arr[i];
     }
     return sum;
-}
-void reverseArray(int arr[], int length) {
-    int start = 0;
-    int end = length - 1;
-
-    while (start < end) {
-        // Swap the elements at the start and end positions
-        int temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
-
-        // Move the start and end pointers towards each other
-        start++;
-        end--;
-    }
 }
 
  int main(){
@@ -56,6 +49,9 @@ int* rev = new int[size];
     std:: cout << "Product of the array is " << product << std::endl;
 
     std:: cout << " the reversed array is " << std :: endl;
+
+    reverseArray(arr, size);
+
     // Deallocate memory for the array
     delete[] arr;
 
